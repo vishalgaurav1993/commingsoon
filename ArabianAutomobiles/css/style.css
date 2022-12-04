@@ -1,0 +1,250 @@
+@font-face {
+  font-family: 'DINPro-Bold';
+  src: url('../Fonts/DINPro-Bold.eot'), /* IE9 Compat Modes */
+       url('../Fonts/DINPro-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../Fonts/DINPro-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../Fonts/DINPro-Bold.ttf')  format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+}
+
+body {
+    font-family: 'DINPro-Bold', sans-serif;
+    font-size: 14px;
+    line-height: normal;
+    letter-spacing: .03em;
+    overflow: hidden;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/*===============================================*/
+
+.bodyWrapper {
+    width: 100vw;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: url(../images/BG/BG.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.contentSection {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.welcomeLogo {
+    width: 100%;
+    position: absolute;
+    transform: scale(1);
+    opacity: 1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: welcomeLogo;
+  	animation-duration: 3s;  
+  	animation-timing-function: ease-in;
+  	overflow: hidden;
+  	pointer-events: none;
+}
+@keyframes welcomeLogo {
+  0% {
+  	opacity: 0;
+  	transform: scale(0.5);
+  }
+  50% {
+  	opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+.welcomeLogo > a {
+    display: inline-block;
+    width: 100%;
+    max-width: 60vw;
+}
+.welcomeLogo > a img {
+    width: 100%;
+}
+body.gameOn .welcomeLogo{
+	opacity: 0;
+	transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.carDetailsWrapper {
+    opacity: 0;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.carDetailsWrapper {
+    margin: auto;
+    position:relative;
+}
+body.gameOn .carDetailsWrapper{
+	opacity: 1;
+}
+.carDetailsWrapper a.logo {
+    display: inline-block;
+    width: 15.521vw;
+    position: absolute;
+    top: 3.385vw;
+    right:3.385vw;
+}
+.carDetailsSection {
+    position: absolute;
+    top: 3.385vw;
+    left:3.385vw;
+}
+.carDetailsSection h3 {
+    font-size: 2.135vw;
+    line-height: normal;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 0.521vw;
+}
+.carDetailsSection h1 {
+    font-size: 3.125vw;
+    line-height: normal;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+}
+.carDetailsSection select#carList {
+    width: 23.75vw;
+    height: 3.021vw;
+    border: 0.156vw solid #080808;
+    font-size: 2.24vw;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #878787;
+    font-weight: bold;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background: url(../images/extra/arrow.png);
+    background-repeat: no-repeat;
+    background-position: top 50% right 0.521vw;
+    cursor: pointer;
+    padding: 0 0.521vw;
+    background-size: 1.615vw;
+}
+.displayImg img {
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+    display: block;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.displayImg img.hide{
+    opacity: 0;
+}
+.colorPatterns{
+	position: absolute;
+	bottom: 3.385vw;
+    left:3.385vw;
+}
+.colorPatterns > div {
+    display: inline-block;
+}
+.colorPatterns > div:not(:last-child) {
+    margin-right: 2.604vw;
+}
+.colorPatterns > div > h4 {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.719vw;
+    margin-bottom: 0.521vw;
+}
+.colorPatterns ul li {
+    display: inline-block;
+}
+.colorPatterns ul li:not(:last-child) {
+    margin-right: 0.521vw;
+}
+.colorPatterns ul li a {
+    display: block;
+}
+.colorPatterns ul li a img {
+    display: block;
+    width: 3.333vw;
+}
+.navigation {
+    position: absolute;
+    bottom: 3.385vw;
+    right: 3.385vw;
+}
+.navigation > ul:after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.navigation > ul > li {
+    float: left;
+    padding-left: 2.604vw;
+}
+.navigation > ul > li > a {
+    display: block;
+}
+.navigation > ul > li > a > img {
+    display: block;
+    width: 3.333vw;
+}
+.navigation > ul > li > a[data-direction="left"]> img {
+    transform: rotate(180deg);
+}
